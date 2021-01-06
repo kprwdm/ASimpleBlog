@@ -1,0 +1,29 @@
+<!-- Post Content Column -->
+
+<div class="col-lg-8">
+    <th:block th:each="post : ${posts}">
+    <!-- Title -->
+    <h1 class="mt-4" th:text="${post.title}">...</h1>
+
+    <!-- Author -->
+    <p class="lead">
+        by
+        <span th:text="${post.author}">...</span>
+    </p>
+
+    <hr>
+
+    <!-- Date/Time -->
+    <p>Posted on <span th:text="${post.date}">...</span></p>
+
+    <hr>
+
+<!-- Post Content -->
+<th:block th:utext="${post.content}">
+
+</th:block>
+
+<hr>
+
+</th:block>
+</div>
