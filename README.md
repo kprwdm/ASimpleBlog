@@ -12,7 +12,7 @@ This application was created for a purpose of learning mentioned technologies.
 - [X] Fetching blog name from MySQL database
 - [X] Fetching post title, author, date and content from MySQL database
 - [X] Displaying posts from the database on the main page
-- [ ] Creating About page (controller and template)
+- [X] Creating About page (controller and template)
 - [ ] Fetching navigation links from MySQL database
 - [ ] Creating comments controller
 - [ ] Creating single post page with comments section
