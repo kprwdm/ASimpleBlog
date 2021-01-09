@@ -1,0 +1,47 @@
+<div th:replace="partials/header">
+    <!--  This markup fragment will be included from "partials/header.html" at runtime.   -->
+</div>
+<body>
+<div th:replace="partials/nav">
+    <!--  This markup fragment will be included from "partials/nav.html" at runtime.   -->
+</div>
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-8">
+            Hi! This is about page - more content coming soon :)
+        </div>
+
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Categories Widget -->
+            <div th:replace="partials/categories-widget">
+                <!--  This markup fragment will be included from "partials/categories-widget.html" at runtime.   -->
+            </div>
+
+            <!-- Side Widget -->
+            <div th:replace="partials/side-widget">
+                <!--  This markup fragment will be included from "partials/side-widget.html" at runtime.   -->
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<div th:replace="partials/footer">
+    <!--  This markup fragment will be included from "partials/footer.html" at runtime.   -->
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
