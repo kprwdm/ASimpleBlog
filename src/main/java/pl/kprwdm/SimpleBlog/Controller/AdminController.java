@@ -13,6 +13,9 @@ import pl.kprwdm.SimpleBlog.DAO.ConfigurationDAO;
 import pl.kprwdm.SimpleBlog.DAO.PostDAO;
 import pl.kprwdm.SimpleBlog.Model.Post;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Controller
 public class AdminController {
 
@@ -36,14 +39,22 @@ public class AdminController {
     }
 
     @PostMapping("/new-post")
-    public void CreateNewPost(@ModelAttribute Post post) {
-        //post.setContent();
+    public String CreateNewPost(@ModelAttribute("post") Post postForm) {
+        post.setTitle(postForm.getTitle());
+        post.setContent(escapeHtml(postForm.getContent()));
+        post.setDate(new Date());
+        post.setCategory(1);
+        post.setAuthor("Tomek Piasek");
 
+        postDAO.save(post);
 
+        return "redirect:/";
     }
 
-    private String encodeHTMLChars(String htmlCode) {
-        return HtmlUtils.htmlEscape(htmlCode);
+    private String escapeHtml(String inputStringHtml)
+    {
+        return HtmlUtils.htmlEscape(inputStringHtml);
     }
+
 
 }
