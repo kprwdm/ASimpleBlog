@@ -1,8 +1,11 @@
 package pl.kprwdm.SimpleBlog.Model;
 
 
+import org.springframework.stereotype.Repository;
+
 import java.util.Date;
 
+@Repository("Post")
 public class Post {
     private int id;
     private String author;

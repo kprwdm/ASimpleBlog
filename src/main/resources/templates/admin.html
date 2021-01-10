@@ -1,0 +1,42 @@
+<div th:replace="partials/header">
+    <!--  This markup fragment will be included from "partials/header.html" at runtime.   -->
+</div>
+<body>
+<div th:replace="partials/nav">
+    <!--  This markup fragment will be included from "partials/nav.html" at runtime.   -->
+</div>
+<!-- Page Content -->
+<div class="container">
+
+    <form style="padding-top: 50px" th:action="@{/new-post}" th:object="${post}" method="post">
+        <div class="form-group row">
+            <label class="col-4 col-form-label" for="postTitle">Post Title</label>
+            <div class="col-8">
+                <input id="postTitle" name="postTitle" placeholder="Post title" type="text" class="form-control" required="required" th:field="*{title}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="postContent" class="col-4 col-form-label">Post Content</label>
+            <div class="col-8">
+                <textarea id="postContent" name="postContent" cols="40" rows="10" class="form-control" required="required" th:field="*{content}"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="partials/footer">
+    <!--  This markup fragment will be included from "partials/footer.html" at runtime.   -->
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

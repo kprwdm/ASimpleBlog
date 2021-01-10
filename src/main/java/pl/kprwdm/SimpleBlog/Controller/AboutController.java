@@ -13,14 +13,13 @@ import pl.kprwdm.SimpleBlog.Model.Post;
 import java.util.List;
 
 @Controller
-@RequestMapping("/about")
-public class AboutContoller {
+public class AboutController {
 
 
     @Autowired
     private ConfigurationDAO configurationDAO;
 
-    @GetMapping
+    @RequestMapping("/about")
     public String main(Model model) {
 
         String blogName = configurationDAO.getBlogName();
