@@ -2,6 +2,7 @@ package pl.kprwdm.SimpleBlog.Controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import pl.kprwdm.SimpleBlog.Model.Post;
 import java.util.List;
 
 @Controller
+@Configuration
 public class AboutController {
 
 
