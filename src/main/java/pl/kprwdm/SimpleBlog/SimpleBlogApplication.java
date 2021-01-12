@@ -8,9 +8,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SimpleBlogApplication extends SpringBootServletInitializer {
-
-	private static final Logger logger = LogManager.getLogger(SimpleBlogApplication.class);
+public class SimpleBlogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleBlogApplication.class, args);
