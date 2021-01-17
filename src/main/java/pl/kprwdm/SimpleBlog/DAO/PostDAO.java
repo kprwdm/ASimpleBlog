@@ -13,8 +13,13 @@ import java.util.Optional;
 @Repository("postDao")
 public class PostDAO {
 
+
+    private final JdbcTemplate jdbcTemplate;
+
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    public PostDAO(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     public void save(Post post) {
         jdbcTemplate.update("INSERT INTO post  (author, date, title, content, category) VALUES(?,?,?,?,?)",
@@ -40,6 +45,6 @@ public class PostDAO {
 
     public Optional<Post> findById(int id) {
      //TODO PostDAO findById
-        return null;
+        return Optional.empty();
     }
 }

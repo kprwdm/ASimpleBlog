@@ -1,5 +1,8 @@
 package pl.kprwdm.SimpleBlog.Model;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Configuration {
 
     private String blogName;

@@ -1,11 +1,10 @@
 package pl.kprwdm.SimpleBlog.Model;
 
-
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
-@Repository("Post")
+@Service
 public class Post {
     private int id;
     private String author;
